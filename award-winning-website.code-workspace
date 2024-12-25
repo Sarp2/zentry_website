@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "public",
+			"path": "../public"
+		},
+		{
+			"name": "award-winning-website",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
