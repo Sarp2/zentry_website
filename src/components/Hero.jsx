@@ -1,10 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react'
-import Button from './Button';
+import { useRef, useState, useEffect } from 'react'
 import { TiLocationArrow } from 'react-icons/ti';
-import { useGSAP } from '@gsap/react';
-import gsap from "gsap";
 
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/all';
+
+import Button from './Button';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +35,7 @@ const Hero = () => {
     if(loadedVideos === totalVideos - 1) {
       setIsLoading(false);
     }
-  }, [loadedVideos,])
+  }, [loadedVideos])
 
   useGSAP(() => {
     if (hasClicked) {
@@ -59,7 +60,7 @@ const Hero = () => {
   }, 
   { 
     dependencies: [currentIndex], 
-    revertOnUpdate: true
+    revertOnUpdate: true,
   }
 );
 
@@ -119,8 +120,7 @@ const Hero = () => {
             loop
             muted
             id="next-video"
-            className="absolute-center invisible absolute z-20 size-64 
-            object-cover object-center"
+            className="absolute-center invisible absolute z-20 size-64  object-cover object-center"
             onLoadedData={handleVideoLoad}
           />
 

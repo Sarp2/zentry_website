@@ -1,4 +1,5 @@
 import { FaDiscord, FaTwitch, FaTwitter } from "react-icons/fa";
+
 const socialLinks = [
   { discord: "https://discord.com", icon: <FaDiscord /> },
   { twitter: "https://twitter.com", icon: <FaTwitter /> },

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import clsx from "clsx";
 
@@ -37,9 +37,9 @@ const AnimatedTitle = ({ title, containerClass }) => {
 					key={index}
 					className="flex-center max-w-full flex-wrap gap-2 px-10 md:gap-3"
 				>
-					{line.split(" ").map((word, idx) => (
+					{line.split(" ").map((word, index) => (
 						<span 
-						  key={idx}
+						  key={index}
 							className="animated-word"
 							dangerouslySetInnerHTML={{ __html: word}}
 						/>
